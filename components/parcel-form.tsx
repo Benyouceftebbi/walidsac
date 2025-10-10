@@ -1824,8 +1824,8 @@ export default function ParcelForm() {
   
         const res = await uploadNoestParcel({
           parcel,
-          apiKey: "U2FsdGVkX1/phI6nKjH143p35gdVF6HLt3QsscTj4nGldePkL2ncPX4uFpXzJ7tZ8ipXi6SiYgEjhOP7T7+LNw==",
-          apiToken: "U2FsdGVkX1/8SysbgoOuXKWdzKxc8tqlG05QGZBI+8g=",
+          apiKey: shop.apiKey,
+          apiToken:shop.apiToken,
           shopId:shop?.id,
         });
   
