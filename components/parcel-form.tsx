@@ -18,24 +18,7 @@ import { auth, db, functions } from "@/lib/firebase-config"
 import { httpsCallable } from "firebase/functions"
 import { doc, getDoc } from "firebase/firestore"
 
-const stationsByWilaya: Record<string, Array<{ id: string; name: string }>> = {
-  "1": [
-    { id: "ALG001", name: "Alger Centre" },
-    { id: "ALG002", name: "Alger Bab Ezzouar" },
-  ],
-  "31": [
-    { id: "ORA001", name: "Oran Es Senia" },
-    { id: "ORA002", name: "Oran Centre" },
-  ],
-  "25": [
-    { id: "CON001", name: "Constantine Zouaghi" },
-    { id: "CON002", name: "Constantine Centre" },
-  ],
-  "23": [{ id: "ANN001", name: "Annaba Centre" }],
-  "9": [{ id: "BLI001", name: "Blida Centre" }],
-  "19": [{ id: "SET001", name: "Sétif Centre" }],
-  "5": [{ id: "BAT001", name: "Batna Centre" }],
-}
+
 
 const communesByWilaya: Record<string, string[]> = {
   "1": [
@@ -1916,16 +1899,7 @@ export default function ParcelForm() {
           </CardHeader>
           <CardContent className="pt-6">
             <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="space-y-2">
-                <Label htmlFor="reference">Référence / المرجع</Label>
-                <Input
-                  id="reference"
-                  value={formData.reference}
-                  onChange={(e) => handleInputChange("reference", e.target.value)}
-                  maxLength={255}
-                  placeholder="Référence de la commande"
-                />
-              </div>
+
 
               <div className="space-y-2">
                 <Label htmlFor="client" className="flex items-center gap-1">
@@ -2067,22 +2041,11 @@ export default function ParcelForm() {
                 />
               </div>
 
-              <div className="space-y-2">
-                <Label htmlFor="remarque">Remarque / ملاحظة</Label>
-                <Textarea
-                  id="remarque"
-                  value={formData.remarque}
-                  onChange={(e) => handleInputChange("remarque", e.target.value)}
-                  maxLength={255}
-                  placeholder="Remarques supplémentaires"
-                  rows={2}
-                />
-              </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="type_id" className="flex items-center gap-1">
-                    Type / النوع
+                    Type de livraison / نوع التوصيل
                     <span className="text-red-500">*</span>
                   </Label>
                   <Select
@@ -2173,19 +2136,6 @@ export default function ParcelForm() {
                 </div>
               )}
 
-              <div className="space-y-2">
-                <Label htmlFor="stock">Stock / المخزون</Label>
-                <Select value={formData.stock} onValueChange={(value) => handleInputChange("stock", value)}>
-                  <SelectTrigger id="stock">
-                    <SelectValue />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="0">0 - Non</SelectItem>
-                    <SelectItem value="1">1 - Oui</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-
               {showQuantite && (
                 <div className="space-y-2">
                   <Label htmlFor="quantite" className="flex items-center gap-1">
@@ -2207,22 +2157,6 @@ export default function ParcelForm() {
                 <Label htmlFor="can_open">Peut ouvrir / يمكن الفتح</Label>
                 <Select value={formData.can_open} onValueChange={(value) => handleInputChange("can_open", value)}>
                   <SelectTrigger id="can_open">
-                    <SelectValue />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="0">0 - Non</SelectItem>
-                    <SelectItem value="1">1 - Oui</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-
-              <div className="space-y-2">
-                <Label htmlFor="remboursement">Remboursement / استرداد</Label>
-                <Select
-                  value={formData.remboursement}
-                  onValueChange={(value) => handleInputChange("remboursement", value)}
-                >
-                  <SelectTrigger id="remboursement">
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>
