@@ -1623,7 +1623,341 @@ const communesByWilaya: Record<string, string[]> = {
   "57": ["El M'Ghair", "Oum Touyour", "Sidi Khelil", "Still", "Djamaa", "M'rara", "Sidi Amrane", "Tenedla"],
   "58": ["El Meniaa", "Hassi Gara", "Hassi Fehal"],
 }
-
+const deliveryPrices: Record<
+  string,
+  { tarif_id: number; wilaya_id: number; tarif: string; tarif_stopdesk: string }
+> = {
+  "16": {
+      "tarif_id": 181,
+      "wilaya_id": 16,
+      "tarif": "600",
+      "tarif_stopdesk": "300"
+  },
+  "9": {
+      "tarif_id": 181,
+      "wilaya_id": 9,
+      "tarif": "500",
+      "tarif_stopdesk": "250"
+  },
+  "2": {
+      "tarif_id": 181,
+      "wilaya_id": 2,
+      "tarif": "700",
+      "tarif_stopdesk": "350"
+  },
+  "6": {
+      "tarif_id": 181,
+      "wilaya_id": 6,
+      "tarif": "800",
+      "tarif_stopdesk": "350"
+  },
+  "44": {
+      "tarif_id": 181,
+      "wilaya_id": 44,
+      "tarif": "800",
+      "tarif_stopdesk": "350"
+  },
+  "17": {
+      "tarif_id": 181,
+      "wilaya_id": 17,
+      "tarif": "1000",
+      "tarif_stopdesk": "500"
+  },
+  "35": {
+      "tarif_id": 181,
+      "wilaya_id": 35,
+      "tarif": "600",
+      "tarif_stopdesk": "300"
+  },
+  "15": {
+      "tarif_id": 181,
+      "wilaya_id": 15,
+      "tarif": "700",
+      "tarif_stopdesk": "350"
+  },
+  "10": {
+      "tarif_id": 181,
+      "wilaya_id": 10,
+      "tarif": "750",
+      "tarif_stopdesk": "350"
+  },
+  "47": {
+      "tarif_id": 181,
+      "wilaya_id": 47,
+      "tarif": "1100",
+      "tarif_stopdesk": "500"
+  },
+  "30": {
+      "tarif_id": 181,
+      "wilaya_id": 30,
+      "tarif": "1100",
+      "tarif_stopdesk": "500"
+  },
+  "3": {
+      "tarif_id": 181,
+      "wilaya_id": 3,
+      "tarif": "1000",
+      "tarif_stopdesk": "500"
+  },
+  "26": {
+      "tarif_id": 181,
+      "wilaya_id": 26,
+      "tarif": "600",
+      "tarif_stopdesk": "300"
+  },
+  "42": {
+      "tarif_id": 181,
+      "wilaya_id": 42,
+      "tarif": "600",
+      "tarif_stopdesk": "300"
+  },
+  "39": {
+      "tarif_id": 181,
+      "wilaya_id": 39,
+      "tarif": "1100",
+      "tarif_stopdesk": "500"
+  },
+  "23": {
+      "tarif_id": 181,
+      "wilaya_id": 23,
+      "tarif": "800",
+      "tarif_stopdesk": "350"
+  },
+  "36": {
+      "tarif_id": 181,
+      "wilaya_id": 36,
+      "tarif": "900",
+      "tarif_stopdesk": "400"
+  },
+  "21": {
+      "tarif_id": 181,
+      "wilaya_id": 21,
+      "tarif": "800",
+      "tarif_stopdesk": "350"
+  },
+  "24": {
+      "tarif_id": 181,
+      "wilaya_id": 24,
+      "tarif": "900",
+      "tarif_stopdesk": "400"
+  },
+  "41": {
+      "tarif_id": 181,
+      "wilaya_id": 41,
+      "tarif": "900",
+      "tarif_stopdesk": "400"
+  },
+  "12": {
+      "tarif_id": 181,
+      "wilaya_id": 12,
+      "tarif": "900",
+      "tarif_stopdesk": "400"
+  },
+  "25": {
+      "tarif_id": 181,
+      "wilaya_id": 25,
+      "tarif": "800",
+      "tarif_stopdesk": "350"
+  },
+  "5": {
+      "tarif_id": 181,
+      "wilaya_id": 5,
+      "tarif": "800",
+      "tarif_stopdesk": "350"
+  },
+  "40": {
+      "tarif_id": 181,
+      "wilaya_id": 40,
+      "tarif": "900",
+      "tarif_stopdesk": "400"
+  },
+  "4": {
+      "tarif_id": 181,
+      "wilaya_id": 4,
+      "tarif": "800",
+      "tarif_stopdesk": "350"
+  },
+  "18": {
+      "tarif_id": 181,
+      "wilaya_id": 18,
+      "tarif": "800",
+      "tarif_stopdesk": "350"
+  },
+  "43": {
+      "tarif_id": 181,
+      "wilaya_id": 43,
+      "tarif": "800",
+      "tarif_stopdesk": "350"
+  },
+  "31": {
+      "tarif_id": 181,
+      "wilaya_id": 31,
+      "tarif": "800",
+      "tarif_stopdesk": "350"
+  },
+  "22": {
+      "tarif_id": 181,
+      "wilaya_id": 22,
+      "tarif": "800",
+      "tarif_stopdesk": "350"
+  },
+  "29": {
+      "tarif_id": 181,
+      "wilaya_id": 29,
+      "tarif": "800",
+      "tarif_stopdesk": "350"
+  },
+  "27": {
+      "tarif_id": 181,
+      "wilaya_id": 27,
+      "tarif": "800",
+      "tarif_stopdesk": "350"
+  },
+  "48": {
+      "tarif_id": 181,
+      "wilaya_id": 48,
+      "tarif": "800",
+      "tarif_stopdesk": "350"
+  },
+  "20": {
+      "tarif_id": 181,
+      "wilaya_id": 20,
+      "tarif": "900",
+      "tarif_stopdesk": "400"
+  },
+  "14": {
+      "tarif_id": 181,
+      "wilaya_id": 14,
+      "tarif": "900",
+      "tarif_stopdesk": "400"
+  },
+  "38": {
+      "tarif_id": 181,
+      "wilaya_id": 38,
+      "tarif": "800",
+      "tarif_stopdesk": "350"
+  },
+  "19": {
+      "tarif_id": 181,
+      "wilaya_id": 19,
+      "tarif": "800",
+      "tarif_stopdesk": "350"
+  },
+  "34": {
+      "tarif_id": 181,
+      "wilaya_id": 34,
+      "tarif": "800",
+      "tarif_stopdesk": "350"
+  },
+  "28": {
+      "tarif_id": 181,
+      "wilaya_id": 28,
+      "tarif": "800",
+      "tarif_stopdesk": "350"
+  },
+  "7": {
+      "tarif_id": 181,
+      "wilaya_id": 7,
+      "tarif": "1000",
+      "tarif_stopdesk": "500"
+  },
+  "13": {
+      "tarif_id": 181,
+      "wilaya_id": 13,
+      "tarif": "800",
+      "tarif_stopdesk": "350"
+  },
+  "46": {
+      "tarif_id": 181,
+      "wilaya_id": 46,
+      "tarif": "800",
+      "tarif_stopdesk": "350"
+  },
+  "8": {
+      "tarif_id": 181,
+      "wilaya_id": 8,
+      "tarif": "1200",
+      "tarif_stopdesk": "600"
+  },
+  "11": {
+      "tarif_id": 181,
+      "wilaya_id": 11,
+      "tarif": "2000",
+      "tarif_stopdesk": "1000"
+  },
+  "32": {
+      "tarif_id": 181,
+      "wilaya_id": 32,
+      "tarif": "1200",
+      "tarif_stopdesk": "600"
+  },
+  "33": {
+      "tarif_id": 181,
+      "wilaya_id": 33,
+      "tarif": "1950",
+      "tarif_stopdesk": "1000"
+  },
+  "37": {
+      "tarif_id": 181,
+      "wilaya_id": 37,
+      "tarif": "1700",
+      "tarif_stopdesk": "850"
+  },
+  "45": {
+      "tarif_id": 181,
+      "wilaya_id": 45,
+      "tarif": "1200",
+      "tarif_stopdesk": "600"
+  },
+  "1": {
+      "tarif_id": 181,
+      "wilaya_id": 1,
+      "tarif": "1500",
+      "tarif_stopdesk": "700"
+  },
+  "49": {
+      "tarif_id": 181,
+      "wilaya_id": 49,
+      "tarif": "1500",
+      "tarif_stopdesk": "750"
+  },
+  "53": {
+      "tarif_id": 181,
+      "wilaya_id": 53,
+      "tarif": "1850",
+      "tarif_stopdesk": "950"
+  },
+  "58": {
+      "tarif_id": 181,
+      "wilaya_id": 58,
+      "tarif": "1100",
+      "tarif_stopdesk": "500"
+  },
+  "57": {
+      "tarif_id": 181,
+      "wilaya_id": 57,
+      "tarif": "1100",
+      "tarif_stopdesk": "500"
+  },
+  "55": {
+      "tarif_id": 181,
+      "wilaya_id": 55,
+      "tarif": "1100",
+      "tarif_stopdesk": "500"
+  },
+  "51": {
+      "tarif_id": 181,
+      "wilaya_id": 51,
+      "tarif": "1000",
+      "tarif_stopdesk": "500"
+  },
+  "52": {
+      "tarif_id": 181,
+      "wilaya_id": 52,
+      "tarif": "1200",
+      "tarif_stopdesk": "600"
+  }
+}
 interface FormData {
   reference: string
   client: string
@@ -1632,6 +1966,10 @@ interface FormData {
   adresse: string
   wilaya_id: string
   commune: string
+  // NEW
+  product_price: string
+  delivery_price: string
+  // total will be read-only in UI; we won't store it here to avoid state loops
   montant: string
   remarque: string
   produit: string
@@ -1653,7 +1991,9 @@ const initialFormData: FormData = {
   adresse: "",
   wilaya_id: "",
   commune: "",
-  montant: "",
+  product_price: "",
+  delivery_price: "",
+  montant: "",           // will be auto-filled from total
   remarque: "",
   produit: "",
   type_id: "",
@@ -1712,6 +2052,18 @@ export default function ParcelForm() {
 
     return () => unsub();
   }, []);
+  useEffect(() => {
+    if (!formData.wilaya_id) return;
+  
+    const wilaya = deliveryPrices[formData.wilaya_id];
+    if (!wilaya) {
+      setFormData((prev) => ({ ...prev, delivery_price: "" }));
+      return;
+    }
+  
+    const price = formData.stop_desk === "1" ? wilaya.tarif_stopdesk : wilaya.tarif;
+    setFormData((prev) => ({ ...prev, delivery_price: price }));
+  }, [formData.wilaya_id, formData.stop_desk]);
   const handleLogout = useCallback(async () => {
     try {
       // Firebase logout
@@ -1765,27 +2117,29 @@ export default function ParcelForm() {
         }
   
         // 1) Build the parcel object from your form (same fields you used before)
-        const parcel = {
-          reference: formData.reference,
-          client: formData.client,
-          phone: formData.phone,
-          phone_2: formData.phone_2,
-          adresse: formData.adresse,
-          wilaya_id: Number(formData.wilaya_id),
-          commune: formData.commune,
-          montant: Number(formData.montant),
-          remarque: formData.remarque,
-          produit: formData.produit,
-          type_id: Number(formData.type_id),
-          poids: Number(formData.poids),
-          stop_desk: Number(formData.stop_desk),
-          stock: Number(formData.stock),
-          can_open: Number(formData.can_open),
-          remboursement: Number(formData.remboursement),
-          ...(formData.stock === "1" && { quantite: Number(formData.quantite) }),
-          ...(formData.stop_desk === "1" && { station_code: formData.station_code }),
-        };
-  
+      const parcel = {
+  reference: formData.reference,
+  client: formData.client,
+  phone: formData.phone,
+  phone_2: formData.phone_2,
+  adresse: formData.adresse,
+  wilaya_id: Number(formData.wilaya_id),
+  commune: formData.commune,
+
+  // 👇 use computed total instead of the free-typed montant
+  montant: Number(totalPrice),
+
+  remarque: formData.remarque,
+  produit: formData.produit,
+  type_id: Number(formData.type_id),
+  poids: Number(formData.poids),
+  stop_desk: Number(formData.stop_desk),
+  stock: Number(formData.stock),
+  can_open: Number(formData.can_open),
+  remboursement: Number(formData.remboursement),
+  ...(formData.stock === "1" && { quantite: Number(formData.quantite) }),
+  ...(formData.stop_desk === "1" && { station_code: formData.station_code }),
+}
         // 2) Get encrypted Noest creds + shopId (example: from localStorage or your app state)
         //    These MUST be the encrypted strings (do NOT encrypt on the client with AUTH_KEY).
         const apiKeyEnc = shop.apiKey;   // e.g. stored when user connects Noest
@@ -1861,7 +2215,12 @@ export default function ParcelForm() {
     // Otherwise, just filter by wilaya
     return getStopDesksByWilaya(Number(formData.wilaya_id))
   }, [formData.wilaya_id, formData.commune, getStopDesksByWilaya, getStopDesksByWilayaAndCommune])
-
+  const totalPrice = useMemo(() => {
+    const p = parseFloat(formData.product_price || "0")
+    const d = parseFloat(formData.delivery_price || "0")
+    const total = (isNaN(p) ? 0 : p) + (isNaN(d) ? 0 : d)
+    return total.toFixed(2)
+  }, [formData.product_price, formData.delivery_price])
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50 p-4 pb-20">
       <div className="max-w-4xl mx-auto">
@@ -2011,37 +2370,7 @@ export default function ParcelForm() {
                 </div>
               </div>
 
-              <div className="space-y-2">
-                <Label htmlFor="montant" className="flex items-center gap-1">
-                  Montant / المبلغ
-                  <span className="text-red-500">*</span>
-                </Label>
-                <Input
-                  id="montant"
-                  type="number"
-                  step="0.01"
-                  value={formData.montant}
-                  onChange={(e) => handleInputChange("montant", e.target.value)}
-                  required
-                  placeholder="0.00"
-                />
-              </div>
-
-              <div className="space-y-2">
-                <Label htmlFor="produit" className="flex items-center gap-1">
-                  Produit / المنتج
-                  <span className="text-red-500">*</span>
-                </Label>
-                <Input
-                  id="produit"
-                  value={formData.produit}
-                  onChange={(e) => handleInputChange("produit", e.target.value)}
-                  required
-                  placeholder="Nom du produit"
-                />
-              </div>
-
-
+              
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="type_id" className="flex items-center gap-1">
@@ -2064,21 +2393,9 @@ export default function ParcelForm() {
                   </Select>
                 </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="poids" className="flex items-center gap-1">
-                    Poids (kg) / الوزن
-                    <span className="text-red-500">*</span>
-                  </Label>
-                  <Input
-                    id="poids"
-                    type="number"
-                    value={formData.poids}
-                    onChange={(e) => handleInputChange("poids", e.target.value)}
-                    required
-                    placeholder="Poids en kg"
-                  />
-                </div>
               </div>
+
+              
 
               <div className="space-y-2">
                 <Label htmlFor="stop_desk" className="flex items-center gap-1">
@@ -2135,6 +2452,36 @@ export default function ParcelForm() {
                   </Select>
                 </div>
               )}
+              <div className="space-y-2">
+                <Label htmlFor="produit" className="flex items-center gap-1">
+                  Produit / المنتج
+                  <span className="text-red-500">*</span>
+                </Label>
+                <Input
+                  id="produit"
+                  value={formData.produit}
+                  onChange={(e) => handleInputChange("produit", e.target.value)}
+                  required
+                  placeholder="Nom du produit"
+                />
+              </div>
+
+              
+              <div className="space-y-2">
+                  <Label htmlFor="poids" className="flex items-center gap-1">
+                    Poids (kg) / الوزن
+                    <span className="text-red-500">*</span>
+                  </Label>
+                  <Input
+                    id="poids"
+                    type="number"
+                    value={formData.poids}
+                    onChange={(e) => handleInputChange("poids", e.target.value)}
+                    required
+                    placeholder="Poids en kg"
+                  />
+                </div>
+                
 
               {showQuantite && (
                 <div className="space-y-2">
@@ -2152,6 +2499,57 @@ export default function ParcelForm() {
                   />
                 </div>
               )}
+              <div className="space-y-2">
+    <Label htmlFor="product_price" className="flex items-center gap-1">
+      Prix produit (DA) / سعر المنتج
+      <span className="text-red-500">*</span>
+    </Label>
+    <Input
+      id="product_price"
+      name="product_price"
+      type="number"
+      step="0.01"
+      min="0"
+      value={formData.product_price}
+      onChange={(e) => handleInputChange("product_price", e.target.value)}
+      required
+      placeholder="0.00"
+    />
+  </div>
+
+  {/* Delivery Price */}
+  <div className="space-y-2">
+    <Label htmlFor="delivery_price" className="flex items-center gap-1">
+      Prix livraison (DA) / سعر التوصيل
+    </Label>
+    <Input
+      id="delivery_price"
+      name="delivery_price"
+      type="number"
+      value={formData.delivery_price}
+      readOnly
+      placeholder={
+        formData.wilaya_id
+          ? "Calculé automatiquement"
+          : "Sélectionnez une wilaya"
+      }
+    />
+  </div>
+  <div className="space-y-2">
+    <Label htmlFor="total_price" className="flex items-center gap-1">
+      Total (DA) / المجموع
+    </Label>
+    <Input
+      id="total_price"
+      value={totalPrice}
+      readOnly
+      placeholder="0.00"
+    />
+  </div>
+
+
+
+
 
               <div className="space-y-2">
                 <Label htmlFor="can_open">Peut ouvrir / يمكن الفتح</Label>
