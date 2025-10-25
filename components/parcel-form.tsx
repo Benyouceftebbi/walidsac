@@ -2230,40 +2230,38 @@ export default function ParcelForm() {
               <Package className="w-7 h-7 text-white" />
             </div>
             <div>
-              <h1 className="text-2xl font-bold text-indigo-900">Noest Parcels</h1>
-              <p className="text-sm text-muted-foreground">Gestion des colis / إدارة الطرود</p>
+              <h1 className="text-2xl font-bold text-indigo-900">طرود نوست</h1>
+              <p className="text-sm text-muted-foreground">إدارة الطرود</p>
             </div>
           </div>
           <Button variant="outline" size="sm" onClick={handleLogout} className="gap-2 bg-transparent">
             <LogOut className="w-4 h-4" />
-            <span className="hidden sm:inline">Déconnexion</span>
+            <span className="hidden sm:inline">تسجيل الخروج</span>
           </Button>
         </div>
-
+  
         {successMessage && (
           <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg text-green-800 text-center font-medium">
             {successMessage}
           </div>
         )}
-
+  
         {errorMessage && (
           <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg text-red-800 text-center font-medium">
             {errorMessage}
           </div>
         )}
-
+  
         <Card className="shadow-lg">
           <CardHeader className="bg-gradient-to-r from-indigo-50 to-blue-50">
-            <CardTitle className="text-xl">Ajouter une commande / إضافة طلب</CardTitle>
+            <CardTitle className="text-xl">إضافة طلب جديد</CardTitle>
           </CardHeader>
           <CardContent className="pt-6">
             <form onSubmit={handleSubmit} className="space-y-6">
-
-
+              
               <div className="space-y-2">
                 <Label htmlFor="client" className="flex items-center gap-1">
-                  Client / العميل
-                  <span className="text-red-500">*</span>
+                  العميل <span className="text-red-500">*</span>
                 </Label>
                 <Input
                   id="client"
@@ -2271,15 +2269,14 @@ export default function ParcelForm() {
                   onChange={(e) => handleInputChange("client", e.target.value)}
                   maxLength={255}
                   required
-                  placeholder="Nom du client"
+                  placeholder="اسم العميل"
                 />
               </div>
-
+  
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="phone" className="flex items-center gap-1">
-                    Téléphone / الهاتف
-                    <span className="text-red-500">*</span>
+                    الهاتف <span className="text-red-500">*</span>
                   </Label>
                   <Input
                     id="phone"
@@ -2291,9 +2288,9 @@ export default function ParcelForm() {
                     pattern="[0-9]{9,10}"
                   />
                 </div>
-
+  
                 <div className="space-y-2">
-                  <Label htmlFor="phone_2">Téléphone 2 / الهاتف 2</Label>
+                  <Label htmlFor="phone_2">الهاتف 2</Label>
                   <Input
                     id="phone_2"
                     type="tel"
@@ -2304,11 +2301,10 @@ export default function ParcelForm() {
                   />
                 </div>
               </div>
-
+  
               <div className="space-y-2">
                 <Label htmlFor="adresse" className="flex items-center gap-1">
-                  Adresse / العنوان
-                  <span className="text-red-500">*</span>
+                  العنوان <span className="text-red-500">*</span>
                 </Label>
                 <Textarea
                   id="adresse"
@@ -2316,20 +2312,19 @@ export default function ParcelForm() {
                   onChange={(e) => handleInputChange("adresse", e.target.value)}
                   maxLength={255}
                   required
-                  placeholder="Adresse complète du client"
+                  placeholder="العنوان الكامل للعميل"
                   rows={2}
                 />
               </div>
-
+  
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="wilaya_id" className="flex items-center gap-1">
-                    Wilaya / الولاية
-                    <span className="text-red-500">*</span>
+                    الولاية <span className="text-red-500">*</span>
                   </Label>
                   <Select value={formData.wilaya_id} onValueChange={handleWilayaChange} required>
                     <SelectTrigger id="wilaya_id">
-                      <SelectValue placeholder="Sélectionner une wilaya" />
+                      <SelectValue placeholder="اختر الولاية" />
                     </SelectTrigger>
                     <SelectContent>
                       {WILAYAS.map((wilaya) => (
@@ -2340,11 +2335,10 @@ export default function ParcelForm() {
                     </SelectContent>
                   </Select>
                 </div>
-
+  
                 <div className="space-y-2">
                   <Label htmlFor="commune" className="flex items-center gap-1">
-                    Commune / البلدية
-                    <span className="text-red-500">*</span>
+                    البلدية <span className="text-red-500">*</span>
                   </Label>
                   <Select
                     value={formData.commune}
@@ -2355,7 +2349,7 @@ export default function ParcelForm() {
                     <SelectTrigger id="commune">
                       <SelectValue
                         placeholder={
-                          formData.wilaya_id ? "Sélectionner une commune" : "Sélectionner d'abord une wilaya"
+                          formData.wilaya_id ? "اختر البلدية" : "اختر الولاية أولاً"
                         }
                       />
                     </SelectTrigger>
@@ -2369,13 +2363,11 @@ export default function ParcelForm() {
                   </Select>
                 </div>
               </div>
-
-              
+  
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="type_id" className="flex items-center gap-1">
-                    Type de livraison / نوع التوصيل
-                    <span className="text-red-500">*</span>
+                    نوع التوصيل <span className="text-red-500">*</span>
                   </Label>
                   <Select
                     value={formData.type_id}
@@ -2383,24 +2375,20 @@ export default function ParcelForm() {
                     required
                   >
                     <SelectTrigger id="type_id">
-                      <SelectValue placeholder="Sélectionner un type" />
+                      <SelectValue placeholder="اختر النوع" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="1">1 - Livraison</SelectItem>
-                      <SelectItem value="2">2 - Échange</SelectItem>
-                      <SelectItem value="3">3 - Pick up</SelectItem>
+                      <SelectItem value="1">توصيل</SelectItem>
+                      <SelectItem value="2">تبديل</SelectItem>
+                      <SelectItem value="3">استلام</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
-
               </div>
-
-              
-
+  
               <div className="space-y-2">
                 <Label htmlFor="stop_desk" className="flex items-center gap-1">
-                  Stop Desk / مكتب التوقف
-                  <span className="text-red-500">*</span>
+                  مكتب توصيل <span className="text-red-500">*</span>
                 </Label>
                 <Select
                   value={formData.stop_desk}
@@ -2411,17 +2399,16 @@ export default function ParcelForm() {
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="0">0 - Non</SelectItem>
-                    <SelectItem value="1">1 - Oui</SelectItem>
+                    <SelectItem value="0">لا</SelectItem>
+                    <SelectItem value="1">نعم</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
-
+  
               {showStationCode && (
                 <div className="space-y-2">
                   <Label htmlFor="station_code" className="flex items-center gap-1">
-                    Code Station / رمز المحطة
-                    <span className="text-red-500">*</span>
+                  مكتب توصيل <span className="text-red-500">*</span>
                   </Label>
                   <Select
                     value={formData.station_code}
@@ -2433,12 +2420,12 @@ export default function ParcelForm() {
                       <SelectValue
                         placeholder={
                           stopDesksLoading
-                            ? "Chargement..."
+                            ? "جاري التحميل..."
                             : formData.wilaya_id
-                              ? availableStations.length > 0
-                                ? "Sélectionner une station"
-                                : "Aucune station disponible"
-                              : "Sélectionner d'abord une wilaya"
+                            ? availableStations.length > 0
+                              ? "اختر المحطة"
+                              : "لا توجد محطة متاحة"
+                            : "اختر الولاية أولاً"
                         }
                       />
                     </SelectTrigger>
@@ -2452,42 +2439,38 @@ export default function ParcelForm() {
                   </Select>
                 </div>
               )}
+  
               <div className="space-y-2">
                 <Label htmlFor="produit" className="flex items-center gap-1">
-                  Produit / المنتج
-                  <span className="text-red-500">*</span>
+                  المنتج <span className="text-red-500">*</span>
                 </Label>
                 <Input
                   id="produit"
                   value={formData.produit}
                   onChange={(e) => handleInputChange("produit", e.target.value)}
                   required
-                  placeholder="Nom du produit"
+                  placeholder="اسم المنتج"
                 />
               </div>
-
-              
+  
               <div className="space-y-2">
-                  <Label htmlFor="poids" className="flex items-center gap-1">
-                    Poids (kg) / الوزن
-                    <span className="text-red-500">*</span>
-                  </Label>
-                  <Input
-                    id="poids"
-                    type="number"
-                    value={formData.poids}
-                    onChange={(e) => handleInputChange("poids", e.target.value)}
-                    required
-                    placeholder="Poids en kg"
-                  />
-                </div>
-                
-
+                <Label htmlFor="poids" className="flex items-center gap-1">
+                  الوزن (كغ) <span className="text-red-500">*</span>
+                </Label>
+                <Input
+                  id="poids"
+                  type="number"
+                  value={formData.poids}
+                  onChange={(e) => handleInputChange("poids", e.target.value)}
+                  required
+                  placeholder="الوزن بالكيلوغرام"
+                />
+              </div>
+  
               {showQuantite && (
                 <div className="space-y-2">
                   <Label htmlFor="quantite" className="flex items-center gap-1">
-                    Quantité / الكمية
-                    <span className="text-red-500">*</span>
+                    الكمية <span className="text-red-500">*</span>
                   </Label>
                   <Input
                     id="quantite"
@@ -2495,78 +2478,65 @@ export default function ParcelForm() {
                     value={formData.quantite}
                     onChange={(e) => handleInputChange("quantite", e.target.value)}
                     required={showQuantite}
-                    placeholder="Quantité"
+                    placeholder="الكمية"
                   />
                 </div>
               )}
+  
               <div className="space-y-2">
-    <Label htmlFor="product_price" className="flex items-center gap-1">
-      Prix produit (DA) / سعر المنتج
-      <span className="text-red-500">*</span>
-    </Label>
-    <Input
-      id="product_price"
-      name="product_price"
-      type="number"
-      step="0.01"
-      min="0"
-      value={formData.product_price}
-      onChange={(e) => handleInputChange("product_price", e.target.value)}
-      required
-      placeholder="0.00"
-    />
-  </div>
-
-  {/* Delivery Price */}
-  <div className="space-y-2">
-    <Label htmlFor="delivery_price" className="flex items-center gap-1">
-      Prix livraison (DA) / سعر التوصيل
-    </Label>
-    <Input
-      id="delivery_price"
-      name="delivery_price"
-      type="number"
-      value={formData.delivery_price}
-      readOnly
-      placeholder={
-        formData.wilaya_id
-          ? "Calculé automatiquement"
-          : "Sélectionnez une wilaya"
-      }
-    />
-  </div>
-  <div className="space-y-2">
-    <Label htmlFor="total_price" className="flex items-center gap-1">
-      Total (DA) / المجموع
-    </Label>
-    <Input
-      id="total_price"
-      value={totalPrice}
-      readOnly
-      placeholder="0.00"
-    />
-  </div>
-
-
-
-
-
+                <Label htmlFor="product_price" className="flex items-center gap-1">
+                  سعر المنتج (دج) <span className="text-red-500">*</span>
+                </Label>
+                <Input
+                  id="product_price"
+                  name="product_price"
+                  type="number"
+                  step="0.01"
+                  min="0"
+                  value={formData.product_price}
+                  onChange={(e) => handleInputChange("product_price", e.target.value)}
+                  required
+                  placeholder="0.00"
+                />
+              </div>
+  
               <div className="space-y-2">
-                <Label htmlFor="can_open">Peut ouvrir / يمكن الفتح</Label>
+                <Label htmlFor="delivery_price" className="flex items-center gap-1">
+                  سعر التوصيل (دج)
+                </Label>
+                <Input
+                  id="delivery_price"
+                  name="delivery_price"
+                  type="number"
+                  value={formData.delivery_price}
+                  readOnly
+                  placeholder={formData.wilaya_id ? "يُحسب تلقائيًا" : "اختر الولاية"}
+                />
+              </div>
+  
+              <div className="space-y-2">
+                <Label htmlFor="total_price" className="flex items-center gap-1">
+                  المجموع (دج)
+                </Label>
+                <Input id="total_price" value={totalPrice} readOnly placeholder="0.00" />
+              </div>
+  
+              <div className="space-y-2">
+                <Label htmlFor="can_open">يمكن الفتح</Label>
                 <Select value={formData.can_open} onValueChange={(value) => handleInputChange("can_open", value)}>
                   <SelectTrigger id="can_open">
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="0">0 - Non</SelectItem>
-                    <SelectItem value="1">1 - Oui</SelectItem>
+                    <SelectItem value="0">لا</SelectItem>
+                    <SelectItem value="1">نعم</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
-
+  
               <div className="pt-4">
                 <Button type="submit" className="w-full h-12 text-base font-medium" disabled={isSubmitting}>
-                  {isSubmitting ? "Enregistrement..." : "Enregistrer le colis / حفظ الطرد"}
+                  {isSubmitting ? "جارٍ الحفظ..." : "حفظ الطرد"}
                 </Button>
               </div>
             </form>
@@ -2575,4 +2545,5 @@ export default function ParcelForm() {
       </div>
     </div>
   )
+  
 }
