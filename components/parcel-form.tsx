@@ -2533,7 +2533,20 @@ export default function ParcelForm() {
                   </SelectContent>
                 </Select>
               </div>
-  
+              <div className="space-y-2">
+                <Label htmlFor="remarque" className="flex items-center gap-1">
+                ملاحظة <span className="text-red-500"></span>
+                </Label>
+                <Textarea
+                  id="remarque"
+                  value={formData.remarque}
+                  onChange={(e) => handleInputChange("remarque", e.target.value)}
+                  maxLength={255}
+                  required
+                  placeholder="ملاحظة"
+                  rows={2}
+                />
+              </div>
               <div className="pt-4">
                 <Button type="submit" className="w-full h-12 text-base font-medium" disabled={isSubmitting}>
                   {isSubmitting ? "جارٍ الحفظ..." : "حفظ الطرد"}
