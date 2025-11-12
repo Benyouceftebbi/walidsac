@@ -1631,7 +1631,7 @@ const deliveryPrices: Record<
       "tarif_id": 181,
       "wilaya_id": 16,
       "tarif": "600",
-      "tarif_stopdesk": "300"
+      "tarif_stopdesk": "350"
   },
   "9": {
       "tarif_id": 181,
@@ -1642,20 +1642,20 @@ const deliveryPrices: Record<
   "2": {
       "tarif_id": 181,
       "wilaya_id": 2,
-      "tarif": "700",
-      "tarif_stopdesk": "350"
+      "tarif": "800",
+      "tarif_stopdesk": "400"
   },
   "6": {
       "tarif_id": 181,
       "wilaya_id": 6,
       "tarif": "800",
-      "tarif_stopdesk": "350"
+      "tarif_stopdesk": "400"
   },
   "44": {
       "tarif_id": 181,
       "wilaya_id": 44,
       "tarif": "800",
-      "tarif_stopdesk": "350"
+      "tarif_stopdesk": "400"
   },
   "17": {
       "tarif_id": 181,
@@ -1667,19 +1667,19 @@ const deliveryPrices: Record<
       "tarif_id": 181,
       "wilaya_id": 35,
       "tarif": "600",
-      "tarif_stopdesk": "300"
+      "tarif_stopdesk": "350"
   },
   "15": {
       "tarif_id": 181,
       "wilaya_id": 15,
-      "tarif": "700",
-      "tarif_stopdesk": "350"
+      "tarif": "800",
+      "tarif_stopdesk": "400"
   },
   "10": {
       "tarif_id": 181,
       "wilaya_id": 10,
-      "tarif": "750",
-      "tarif_stopdesk": "350"
+      "tarif": "800",
+      "tarif_stopdesk": "400"
   },
   "47": {
       "tarif_id": 181,
@@ -1703,91 +1703,91 @@ const deliveryPrices: Record<
       "tarif_id": 181,
       "wilaya_id": 26,
       "tarif": "600",
-      "tarif_stopdesk": "300"
+      "tarif_stopdesk": "400"
   },
   "42": {
       "tarif_id": 181,
       "wilaya_id": 42,
       "tarif": "600",
-      "tarif_stopdesk": "300"
+      "tarif_stopdesk": "400"
   },
   "39": {
       "tarif_id": 181,
       "wilaya_id": 39,
       "tarif": "1100",
-      "tarif_stopdesk": "500"
+      "tarif_stopdesk": "550"
   },
   "23": {
       "tarif_id": 181,
       "wilaya_id": 23,
       "tarif": "800",
-      "tarif_stopdesk": "350"
+      "tarif_stopdesk": "400"
   },
   "36": {
       "tarif_id": 181,
       "wilaya_id": 36,
       "tarif": "900",
-      "tarif_stopdesk": "400"
+      "tarif_stopdesk": "450"
   },
   "21": {
       "tarif_id": 181,
       "wilaya_id": 21,
       "tarif": "800",
-      "tarif_stopdesk": "350"
+      "tarif_stopdesk": "400"
   },
   "24": {
       "tarif_id": 181,
       "wilaya_id": 24,
       "tarif": "900",
-      "tarif_stopdesk": "400"
+      "tarif_stopdesk": "450"
   },
   "41": {
       "tarif_id": 181,
       "wilaya_id": 41,
       "tarif": "900",
-      "tarif_stopdesk": "400"
+      "tarif_stopdesk": "450"
   },
   "12": {
       "tarif_id": 181,
       "wilaya_id": 12,
       "tarif": "900",
-      "tarif_stopdesk": "400"
+      "tarif_stopdesk": "450"
   },
   "25": {
       "tarif_id": 181,
       "wilaya_id": 25,
       "tarif": "800",
-      "tarif_stopdesk": "350"
+      "tarif_stopdesk": "400"
   },
   "5": {
       "tarif_id": 181,
       "wilaya_id": 5,
       "tarif": "800",
-      "tarif_stopdesk": "350"
+      "tarif_stopdesk": "400"
   },
   "40": {
       "tarif_id": 181,
       "wilaya_id": 40,
       "tarif": "900",
-      "tarif_stopdesk": "400"
+      "tarif_stopdesk": "450"
   },
   "4": {
       "tarif_id": 181,
       "wilaya_id": 4,
       "tarif": "800",
-      "tarif_stopdesk": "350"
+      "tarif_stopdesk": "400"
   },
   "18": {
       "tarif_id": 181,
       "wilaya_id": 18,
       "tarif": "800",
-      "tarif_stopdesk": "350"
+      "tarif_stopdesk": "400"
   },
   "43": {
       "tarif_id": 181,
       "wilaya_id": 43,
       "tarif": "800",
-      "tarif_stopdesk": "350"
+      "tarif_stopdesk": "400"
   },
   "31": {
       "tarif_id": 181,
@@ -1799,61 +1799,61 @@ const deliveryPrices: Record<
       "tarif_id": 181,
       "wilaya_id": 22,
       "tarif": "800",
-      "tarif_stopdesk": "350"
+      "tarif_stopdesk": "400"
   },
   "29": {
       "tarif_id": 181,
       "wilaya_id": 29,
       "tarif": "800",
-      "tarif_stopdesk": "350"
+      "tarif_stopdesk": "400"
   },
   "27": {
       "tarif_id": 181,
       "wilaya_id": 27,
       "tarif": "800",
-      "tarif_stopdesk": "350"
+      "tarif_stopdesk": "400"
   },
   "48": {
       "tarif_id": 181,
       "wilaya_id": 48,
       "tarif": "800",
-      "tarif_stopdesk": "350"
+      "tarif_stopdesk": "400"
   },
   "20": {
       "tarif_id": 181,
       "wilaya_id": 20,
-      "tarif": "900",
+      "tarif": "800",
       "tarif_stopdesk": "400"
   },
   "14": {
       "tarif_id": 181,
       "wilaya_id": 14,
-      "tarif": "900",
+      "tarif": "800",
       "tarif_stopdesk": "400"
   },
   "38": {
       "tarif_id": 181,
       "wilaya_id": 38,
       "tarif": "800",
-      "tarif_stopdesk": "350"
+      "tarif_stopdesk": "450"
   },
   "19": {
       "tarif_id": 181,
       "wilaya_id": 19,
       "tarif": "800",
-      "tarif_stopdesk": "350"
+      "tarif_stopdesk": "400"
   },
   "34": {
       "tarif_id": 181,
       "wilaya_id": 34,
       "tarif": "800",
-      "tarif_stopdesk": "350"
+      "tarif_stopdesk": "400"
   },
   "28": {
       "tarif_id": 181,
       "wilaya_id": 28,
       "tarif": "800",
-      "tarif_stopdesk": "350"
+      "tarif_stopdesk": "400"
   },
   "7": {
       "tarif_id": 181,
@@ -1865,42 +1865,42 @@ const deliveryPrices: Record<
       "tarif_id": 181,
       "wilaya_id": 13,
       "tarif": "800",
-      "tarif_stopdesk": "350"
+      "tarif_stopdesk": "400"
   },
   "46": {
       "tarif_id": 181,
       "wilaya_id": 46,
       "tarif": "800",
-      "tarif_stopdesk": "350"
+      "tarif_stopdesk": "400"
   },
   "8": {
       "tarif_id": 181,
       "wilaya_id": 8,
-      "tarif": "1200",
+      "tarif": "1100",
       "tarif_stopdesk": "600"
   },
   "11": {
       "tarif_id": 181,
       "wilaya_id": 11,
-      "tarif": "2000",
+      "tarif": "1800",
       "tarif_stopdesk": "1000"
   },
   "32": {
       "tarif_id": 181,
       "wilaya_id": 32,
-      "tarif": "1200",
+      "tarif": "1100",
       "tarif_stopdesk": "600"
   },
   "33": {
       "tarif_id": 181,
       "wilaya_id": 33,
-      "tarif": "1950",
+      "tarif": "1800",
       "tarif_stopdesk": "1000"
   },
   "37": {
       "tarif_id": 181,
       "wilaya_id": 37,
-      "tarif": "1700",
+      "tarif": "1500",
       "tarif_stopdesk": "850"
   },
   "45": {
@@ -1912,20 +1912,20 @@ const deliveryPrices: Record<
   "1": {
       "tarif_id": 181,
       "wilaya_id": 1,
-      "tarif": "1500",
+      "tarif": "1400",
       "tarif_stopdesk": "700"
   },
   "49": {
       "tarif_id": 181,
       "wilaya_id": 49,
-      "tarif": "1500",
+      "tarif": "1400",
       "tarif_stopdesk": "750"
   },
   "53": {
       "tarif_id": 181,
       "wilaya_id": 53,
-      "tarif": "1850",
-      "tarif_stopdesk": "950"
+      "tarif": "1600",
+      "tarif_stopdesk": "1000"
   },
   "58": {
       "tarif_id": 181,
@@ -1948,8 +1948,8 @@ const deliveryPrices: Record<
   "51": {
       "tarif_id": 181,
       "wilaya_id": 51,
-      "tarif": "1000",
-      "tarif_stopdesk": "500"
+      "tarif": "1200",
+      "tarif_stopdesk": "600"
   },
   "52": {
       "tarif_id": 181,
